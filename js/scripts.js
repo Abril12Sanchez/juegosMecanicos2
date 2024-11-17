@@ -1,5 +1,6 @@
 // Variable global para almacenar el mensaje de dictado
 let mensajeDictado;
+let nombreJuegoGloabl = ''; //TODO: ESTA VAIRBALE LA PUSE PA PODER USAR EL NOMBRE DEL JUEGO EN LO DEL WASA
 
 // Función para activar el dictado de texto
 function activarDictado() {
@@ -19,28 +20,6 @@ function pausarDictado() {
 function reanudarDictado() {
     if (window.speechSynthesis.paused) {
         window.speechSynthesis.resume();
-    }
-}
-
-// Función para mostrar mensaje de confirmación al apartar un juego y dictarlo
-function apartarJuego(button) {
-    const fechaInput = button.previousElementSibling;
-    const fechaSeleccionada = fechaInput.value;
-
-    if (fechaSeleccionada) {
-        const mensajeConfirmacion = `Apartaste para el día ${fechaSeleccionada}`;
-        alert(mensajeConfirmacion);
-
-        // Dictar el mensaje de confirmación
-        mensajeDictado = new SpeechSynthesisUtterance(mensajeConfirmacion);
-        window.speechSynthesis.speak(mensajeDictado);
-    } else {
-        const mensajeError = "Por favor selecciona una fecha antes de apartar.";
-        alert(mensajeError);
-
-        // Dictar el mensaje de error
-        mensajeDictado = new SpeechSynthesisUtterance(mensajeError);
-        window.speechSynthesis.speak(mensajeDictado);
     }
 }
 
@@ -87,6 +66,25 @@ function infoJuego(juegoDiv) {
     `;
     mensajeDictado = new SpeechSynthesisUtterance(mensajeDictadoTexto);
     window.speechSynthesis.speak(mensajeDictado);
+
+    nombreJuegoGloabl = juegoNombre;
+}
+
+function apartarJuego() {
+    const fecha = document.getElementById("fecha-apartado");
+
+    if (!fecha.value) {
+        alert("Por favor, selecciona una fecha.");
+        return;
+    }
+
+    const fechaistrue = fecha.value;
+    const mensaje = `Hola, estoy interesado en el juego ${nombreJuegoGloabl} para el día ${fechaistrue}`;
+    const numeroTelefono = '4274278875';
+    const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+    
+    //TODO: ESTA ES LA FUNCION PA LO DEL WASA, NO LE MUEVAN XD, TENKIUS :D
 }
 
 function cerrarModal() {

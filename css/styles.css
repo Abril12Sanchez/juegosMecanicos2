@@ -8,7 +8,8 @@
     /* Degradado de azul a morado */
     /* Degradado de azul a morado */
     color: white;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 /* Estilos del logo */
@@ -37,57 +38,45 @@
     /* Color dorado al pasar el mouse */
 }
 
-
-
-/* Fondo de la página */
 body {
-    /* background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); */
-    /* background: linear-gradient(to bottom, #ffffff, #ccd1d379); */
     background-color: #F7F7F7;
-    /* Degradado de verde a azul claro */
     font-family: Arial, sans-serif;
 }
 
 /* Contenedor de juegos */
 .juego-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
 .juego {
     background-color: white;
-    /* Fondo blanco para cada juego */
     border: 2px solid #ddd;
-    /* Borde suave gris */
     border-radius: 10px;
-    /* Bordes redondeados */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil */
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .juego:hover {
     transform: translateY(-10px);
-    /* Efecto de elevación al pasar el mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Sombra más fuerte al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
 }
 
-/* Estilo de la imagen de los juegos */
 .juego img {
     max-width: 100%;
     height: 150px;
-    /* Establecer altura fija para la imagen */
     object-fit: cover;
-    /* Asegura que la imagen se recorte bien */
     border-radius: 5px;
-    /* Bordes redondeados a la imagen */
+    margin-bottom: 15px;
 }
 
-/* Estilos del título y el precio */
 .juego h3 {
     font-size: 20px;
     font-weight: bold;
@@ -97,12 +86,12 @@ body {
 .juego p {
     font-size: 16px;
     color: #555;
+    margin: 5px, 0;
 }
 
 .juego .precio {
     font-size: 18px;
     color: #258752;
-    /* Verde para el precio */
     font-weight: bold;
 }
 
@@ -111,13 +100,14 @@ body {
     background-color: #333;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
     margin-top: 10px;
     width: 100%;
     border-radius: 5px;
-    /* Bordes redondeados */
-    transition: background-color 0.3s;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .juego button:hover {
@@ -244,36 +234,43 @@ button:hover {
 }
 
 /* Responsividad */
-@media (max-width: 600px) {
-    .modal-content {
-        width: 90%;
+@media (max-width: 768px) {
+    .juego-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
     }
 
-    .juego-img h2 {
-        font-size: 1.6em;
+    .juego {
+        padding: 15px;
     }
 
-    #juego-detalles {
-        font-size: 0.9em;
+    .juego h3 {
+        font-size: 16px;
+    }
+
+    .juego p {
+        font-size: 13px;
+    }
+
+    .juego .btn-ver-mas {
+        font-size: 12px;
     }
 }
 
-
 /* LOGO */
-
 .logo-link:hover {
     color: #000;
 }
-
 /* iconos de dictado */
 .iconos-dictado {
+    position: absolute; /* O usa absolute si el contenedor tiene un elemento padre con position relativo */
+    right: 20px; /* Distancia del borde derecho */
+    top: 100px; /* Distancia del borde superior */
     display: flex;
-    /* Muestra los elementos en fila */
     gap: 10px;
-    /* Espacio entre los iconos, ajusta según necesites */
     align-items: center;
-    /* Alinea los iconos verticalmente al centro */
 }
+ /* Alinea los iconos verticalmente al centro */
 
 .icono-bocina,
 .icono-pausa,
