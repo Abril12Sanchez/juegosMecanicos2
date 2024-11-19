@@ -1,10 +1,15 @@
 let mensajeDictado;
 let nombreJuegoGloabl = '';
+let dictadoActivo = false;
 
 function activarDictado() {
-    const texto = document.body.innerText;
-    mensajeDictado = new SpeechSynthesisUtterance(texto);
-    window.speechSynthesis.speak(mensajeDictado);
+    if (dictadoActivo) {
+        dictadoActivo = false;
+        alert("Dictado desactivado.");
+    } else {
+        dictadoActivo = true;
+        alert("Dictado activado. Mueve el cursor sobre los textos para escucharlos.");
+    }
 }
 
 function pausarDictado() {
@@ -18,6 +23,34 @@ function reanudarDictado() {
         window.speechSynthesis.resume();
     }
 }
+
+function leerTexto(event) {
+    if (!dictadoActivo) return;
+
+    const texto = event.target.alt || event.target.innerText.trim();
+    if (texto !== "") {
+        const mensaje = new SpeechSynthesisUtterance(texto);
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(mensaje);
+    }
+}
+
+function esExcluido(elemento) {
+    const clasesExcluidas = [];
+    const etiquetasExcluidas = [];
+    return (
+        clasesExcluidas.some((clase) => elemento.classList.contains(clase)) ||
+        etiquetasExcluidas.includes(elemento.tagName)
+    );
+}
+
+document.body.addEventListener("mouseover", (event) => {
+    if (esExcluido(event.target)) return;
+    const textoDirecto = event.target.childNodes.length === 1 && event.target.innerText.trim() !== "" || event.target.alt;
+    if (textoDirecto) {
+        leerTexto(event);
+    }
+});
 
 function infoJuego(juegoDiv) {
     const juegoNombre = juegoDiv.getAttribute('data-nombre');
