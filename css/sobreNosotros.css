@@ -1,0 +1,167 @@
+/* Barra superior con fondo degradado */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #4e79a7, #9b59b6);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Menú en barra superior */
+.menu-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu-bar a:hover {
+    color: #f1c40f;
+    /* Color dorado al pasar el mouse */
+}
+
+body {
+    background-color: #F7F7F7;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos del logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+}
+
+/* LOGO */
+.logo-link:hover {
+    color: #000;
+}
+
+/* iconos de dictado */
+.iconos-dictado {
+    position: absolute; /* O usa absolute si el contenedor tiene un elemento padre con position relativo */
+    right: 20px; /* Distancia del borde derecho */
+    top: 100px; /* Distancia del borde superior */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logoname {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link img {
+    margin-right: 8px;
+    /* Espacio entre la imagen y el texto */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 40px 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.hero h1 {
+    color: #333;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.hero p {
+    color: #555;
+    font-size: 1.2em;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Content Section */
+.content {
+    padding: 40px 15px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    color: #333;
+    font-size: 2em;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.content p {
+    font-size: 1.1em;
+    color: #666;
+    margin: 15px 0;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonios */
+.content blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 4px solid #9b59b6;
+    font-size: 1.1em;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Iconos de dictado */
+.iconos-dictado .icono-bocina {
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+}
+
+.iconos-dictado .icono-bocina:hover {
+    background-color: #0056b3;
+}
