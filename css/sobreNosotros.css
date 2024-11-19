@@ -52,7 +52,7 @@ body {
     position: absolute;
     right: 20px;
     /* Distancia del borde derecho */
-    top: 50%;
+    top: 100px;
     /* Posiciona verticalmente al centro de la barra */
     transform: translateY(-50%);
     /* Corrige el desplazamiento para centrarlo */

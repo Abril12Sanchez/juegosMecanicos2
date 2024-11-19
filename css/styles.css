@@ -12,6 +12,12 @@
     border-radius: 5px;
 }
 
+*:focus {
+    outline: 4px solid #f1c40f;
+    outline-offset: 1px;
+}
+
+
 /* Estilos del logo */
 .logo {
     font-size: 20px;
