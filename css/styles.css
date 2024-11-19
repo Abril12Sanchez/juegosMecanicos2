@@ -261,11 +261,15 @@ button:hover {
 .logo-link:hover {
     color: #000;
 }
+
 /* iconos de dictado */
 .iconos-dictado {
-    position: absolute; /* O usa absolute si el contenedor tiene un elemento padre con position relativo */
-    right: 20px; /* Distancia del borde derecho */
-    top: 100px; /* Distancia del borde superior */
+    position: absolute;
+    /* O usa absolute si el contenedor tiene un elemento padre con position relativo */
+    right: 20px;
+    /* Distancia del borde derecho */
+    top: 100px;
+    /* Distancia del borde superior */
     display: flex;
     gap: 10px;
     align-items: center;
@@ -291,7 +295,8 @@ button:hover {
 
 .iconos-dictado .icono-bocina {
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #726AAE;
+    /* background-color: #6CA0DC; */
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -310,5 +315,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px; /* Espacio superior para separar del contenido */
+    margin-top: 20px;
+    /* Espacio superior para separar del contenido */
 }

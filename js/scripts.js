@@ -111,3 +111,12 @@ function cerrarModal() {
         window.speechSynthesis.cancel();
     }
 }
+
+// para contactar
+function abrirWhatsApp() {
+    const mensaje = "Me interesaría saber sobre paquetes y más";
+    const numeroTelefono = '4274278875'; // Reemplaza con el número de WhatsApp correcto
+    const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+}
+

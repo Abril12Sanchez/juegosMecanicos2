@@ -7,7 +7,8 @@
     color: white;
     padding: 15px;
     border-radius: 5px;
-    position: relative; /* Necesario para que los iconos de dictado se posicionen correctamente */
+    position: relative;
+    /* Necesario para que los iconos de dictado se posicionen correctamente */
 }
 
 /* Menú en barra superior */
@@ -49,9 +50,12 @@ body {
 /* iconos de dictado */
 .iconos-dictado {
     position: absolute;
-    right: 20px; /* Distancia del borde derecho */
-    top: 50%; /* Posiciona verticalmente al centro de la barra */
-    transform: translateY(-50%); /* Corrige el desplazamiento para centrarlo */
+    right: 20px;
+    /* Distancia del borde derecho */
+    top: 50%;
+    /* Posiciona verticalmente al centro de la barra */
+    transform: translateY(-50%);
+    /* Corrige el desplazamiento para centrarlo */
     display: flex;
     gap: 10px;
     align-items: center;
@@ -156,7 +160,7 @@ footer {
 /* Iconos de dictado */
 .iconos-dictado .icono-bocina {
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #726AAE;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
