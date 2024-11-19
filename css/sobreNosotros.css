@@ -7,6 +7,7 @@
     color: white;
     padding: 15px;
     border-radius: 5px;
+    position: relative; /* Necesario para que los iconos de dictado se posicionen correctamente */
 }
 
 /* Menú en barra superior */
@@ -47,14 +48,16 @@ body {
 
 /* iconos de dictado */
 .iconos-dictado {
-    position: absolute; /* O usa absolute si el contenedor tiene un elemento padre con position relativo */
+    position: absolute;
     right: 20px; /* Distancia del borde derecho */
-    top: 100px; /* Distancia del borde superior */
+    top: 50%; /* Posiciona verticalmente al centro de la barra */
+    transform: translateY(-50%); /* Corrige el desplazamiento para centrarlo */
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
+/* Contenedor para logo */
 .logoname {
     display: flex;
     align-items: center;
