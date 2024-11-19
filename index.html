@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros</title>
-    <link rel="stylesheet" href="/css/sobreNosotros.css">
+    <title>Reserva de Juegos Mecánicos</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="top-bar">
@@ -16,53 +16,106 @@
             </a>
         </div>
         <nav class="menu-bar">
-            <a href="/index.html">Inicio</a>
             <a href="#cuenta">Contáctanos</a>
+            <a href="/sobreNosotros.html">Sobre Nosotros</a>
         </nav>
-        <div class="iconos-dictado">
-            <!-- Botón para activar/desactivar la funcionalidad -->
-            <div class="icono-bocina" onclick="activarDictado()" title="Activar dictado">🗣️ Activar dictado</div>
-        </div>
     </header>
-    <main>
-        <section class="hero">
-            <h1>Sobre Nosotros</h1>
-            <p>
-                En Atracciones y Diversiones Gomez nos especializamos en ofrecer una experiencia única de entretenimiento a través de nuestros juegos mecánicos. Nuestro compromiso es hacer que cada evento sea especial, proporcionando opciones de calidad que se ajustan a todas las edades y necesidades. Ya sea para una fiesta, feria, evento corporativo o cualquier ocasión especial, tenemos la opción perfecta para ti.
-            </p>
+    <h1>Reserva tu Juego Mecánico</h1>
+    <div class="iconos-dictado">
+        <!-- Botón para activar/desactivar la funcionalidad -->
+        <div class="icono-bocina" onclick="activarDictado()" title="Activar dictado">🗣️ Activar dictado</div>
+    </div>
+    <main id="home">
+        <!--
+        TODO: CAMBIE UNAS COSAS DE LA SECCION DE LOS CONTAINERS, VEAN SI ASI ESTA BIEN
+        -->
+        <section id="juegos" class="juego-container">
+            <!-- Juego 1 -->
+            <div class="juego" onclick="infoJuego(this)" 
+            data-nombre="Montaña Rusa"
+            data-descripcion="Emoción pura en cada curva y caída. ¡Siente la adrenalina!"
+            data-precio="$500 por hora" data-altura="40m" data-area="50x30m" data-potencia="200 kW"
+            data-voltaje="380V 50Hz" data-capacidad="20 personas">
+                <img src="images/MONTAÑARUSA.png" alt="Imagen de Montaña rusa">
+                <h3>Montaña Rusa</h3>
+                <p>Emoción pura en cada curva y caída. ¡Siente la adrenalina!</p>
+                <p class="precio">$500 por hora</p>
+                <button>Ver mas</button>
+            </div>
+
+            <!-- Juego 2 -->
+            <div class="juego" onclick="infoJuego(this)" 
+            data-nombre="Rueda de la Fortuna"
+            data-descripcion="Disfruta de las vistas más altas de la feria." data-precio="$399 por hora"
+            data-altura="65m" data-area="38x32m" data-potencia="100 kW" data-voltaje="380V 50Hz"
+            data-capacidad="216 personas">
+                <img src="images/RUEDA DE LA FORTUNA.png" alt="Imagen rueda del fortuna">
+                <h3>Rueda de la Fortuna</h3>
+                <p>Disfruta de las vistas más altas de la feria.</p>
+                <p class="precio">$399 por hora</p>
+                <button>Ver mas</button>
+            </div>
+            <!-- Juego 3 -->
+            <div class="juego" onclick="infoJuego(this)" data-nombre="Gusanito"
+                data-descripcion="Que los peques disfruten dar vueltas sin miedo a las alturas."
+                data-precio="$270 por hora" data-altura="5m" data-area="10x8m" data-potencia="20 kW"
+                data-voltaje="220V 50Hz" data-capacidad="15 personas">
+                <img src="images/GUSANITO.png" alt="Imagen el Gusanito">
+                <h3>Gusanito</h3>
+                <p>Que los peques disfruten dar vueltas sin miedo a las aturas.</p>
+                <p class="precio">$270 por hora</p>
+                <button>Ver mas</button>
+            </div>
+            <!-- Juego 4 -->
+            <div class="juego" onclick="infoJuego(this)" data-nombre="Dragoncito Mini"
+                data-descripcion="Que los niños disfruten al estar más alto de su estatura." data-precio="$325 por hora"
+                data-altura="8m" data-area="12x10m" data-potencia="30 kW" data-voltaje="220V 50Hz"
+                data-capacidad="12 personas">
+                <img src="images/Dragoncito mini.png" alt="Juego del dragoncito en chiquito">
+                <h3>Dragoncito Mini</h3>
+                <p>Que los niños disfruten al estar mas alto de su estatura.</p>
+                <p class="precio">$325 por hora</p>
+                <button>Ver mas</button>
+            </div>
+            <!-- Juego 5 -->
+            <div class="juego" onclick="infoJuego(this)" data-nombre="Dragoncito"
+                data-descripcion="Igual que el mini pero con más altura y capacidad." data-precio="$499 por hora"
+                data-altura="12m" data-area="15x12m" data-potencia="50 kW" data-voltaje="380V 50Hz"
+                data-capacidad="20 personas">
+                <img src="images/DRAGONCITO.png" alt="Juego del dragoncito">
+                <h3>Dragoncito</h3>
+                <p>Igual que el mini pero mas altura y mas cantidad!!.</p>
+                <p class="precio">$499 por hora</p>
+                <button>Ver mas</button>
+            </div>
+            <!-- Juego 6 -->
+            <div class="juego" onclick="infoJuego(this)" 
+            data-nombre="Carrusel"
+            data-descripcion="Para que las parejas disfruten dar vueltas juntos." data-precio="$460 por hora"
+            data-altura="6m" data-area="14x14m" data-potencia="25 kW" data-voltaje="220V 50Hz"
+            data-capacidad="30 personas">
+                <img src="images/CARRUSEL.png" alt="Juego del carrusel">
+                <h3>Carrusel</h3>
+                <p>Para que las parejas disfruten dar vueltas juntos.</p>
+                <p class="precio">$460 por hora</p>
+                <button>Ver mas</button>
+            </div>
         </section>
-        <section class="content">
-            <h2>Nuestra Historia</h2>
-            <p>
-                Fundada en 2012, nuestra empresa comenzó con una pequeña flota de juegos mecánicos, pero con una gran visión: ofrecer momentos de alegría y emoción a nuestros clientes, sin importar sus habilidades físicas o sensoriales. A lo largo de los años, hemos crecido, ampliado nuestra oferta y mejorado nuestros servicios para asegurar que cada cliente disfrute de la máxima seguridad y diversión.
-            </p>
-            <h2>Misión</h2>
-            <p>
-                Nuestra misión es brindar un entretenimiento inclusivo y seguro que permita a todas las personas disfrutar de la diversión sin barreras. Nos esforzamos por ser líderes en el mercado de juegos mecánicos, ofreciendo servicios de alta calidad, con un enfoque en la seguridad, la sostenibilidad y la accesibilidad.
-            </p>
-            <h2>Visión</h2>
-            <p>
-                Convertirnos en la empresa de entretenimiento más confiable y accesible del país, conocida por ofrecer experiencias emocionantes que se adapten a las necesidades de todos, desde niños hasta adultos mayores, y que respeten la diversidad funcional.
-            </p>
-            <h2>Compromiso con la Inclusión</h2>
-            <p>
-                En Atracciones y Diversiones Gomez, creemos que la diversión debe ser accesible para todos. Por eso, nuestros juegos mecánicos están diseñados teniendo en cuenta las necesidades de las personas con discapacidades visuales y auditivas, y garantizamos que todos nuestros servicios cumplan con los estándares de accesibilidad y seguridad para que cada cliente pueda disfrutar sin limitaciones.
-            </p>
-            <img src="images/Feria.jpeg" alt="Nuestro equipo trabajando en un evento" class="responsive-img">
-        </section>
-        <section class="content">
-            <h2>Testimonios</h2>
-            <p>
-                "Un servicio increíble. Los juegos son divertidos y todos, incluidos los niños con discapacidades, pudieron disfrutar sin problemas. ¡Sin duda volveremos!" - María García, Cliente satisfecho
-            </p>
-            <p>
-                "Me sorprendió la atención a los detalles en cuanto a la accesibilidad. Es raro encontrar una empresa que se preocupe tanto por la inclusión. Gracias a todo el equipo de Atracciones y Diversiones Gomez." - Luis Hernández, Cliente
-            </p>
-        </section>
+        <!-- Modal para detalles del juego -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <div class="juego-img">
+                    <h2 id="juego-seleccionado">Detalles de Juego</h2>
+                    <img id="juego-imagen" src="" alt="Imagen del juego">
+                    <h3>Fechas disponibles</h3>
+                    <input type="date" class="fecha-apartado-detalles" aria-label="Selecciona una fecha de apartado" id="fecha-apartado">
+                    <button onclick="apartarJuego(this)">Confirmar Apartado</button>
+                </div>
+                <div class="detalles-juego" id="juego-detalles"></div>
+            </div>
+        </div>      
     </main>
-    <footer>
-        <p>&copy; 2024 Juegos Mecánicos. Todos los derechos reservados.</p>
-    </footer>
-    <script src="/js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
