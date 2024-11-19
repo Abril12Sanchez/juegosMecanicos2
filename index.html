@@ -3,68 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva de Juegos Mecánicos</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/script.js"></script>
+    <title>Renta de Juegos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #dateInput {
+            padding: 0.5rem;
+            font-size: 1rem;
+            margin: 1rem 0;
+            width: 80%;
+        }
+        .footer {
+            margin-top: 3rem;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header class="top-bar">
-        <div class="logoname">
-            <a href="/index.html" class="logo-link">
-                <img src="images/logopng.png" width="40px" height="40px" alt="Logo de juegos Gomez">
-                <div class="logo">Atracciones y Diversiones Gomez</div>
-            </a>
-        </div>
-        <nav class="menu-bar">
-            <a href="#cuenta">Contáctanos</a>
-            <a href="#sobre-nosotros">Sobre Nosotros</a>
-        </nav>
+    <header>
+        <h1>Renta de Juegos Mecánicos</h1>
     </header>
-
-    <h1>Reserva tu Juego Mecánico</h1>
-    <div class="iconos-dictado">
-        <div class="icono-bocina" onclick="activarDictado()" title="Escuchar Contenido">▶️</div>
-        <div class="icono-pausa" onclick="pausarDictado()" title="Pausar Dictado">⏸</div>
-        <div class="icono-reanudar" onclick="reanudarDictado()" title="Reanudar Dictado">🔄</div>
+    <div class="container">
+        <h2>Selecciona tu fecha de renta</h2>
+        <input type="date" id="dateInput">
+        <button id="sendWhatsApp">Reservar por WhatsApp</button>
     </div>
-
-    <main id="home">
-        <section id="juegos" class="juego-container">
-            <!-- Ejemplo de Juego -->
-            <div class="juego" onclick="infoJuego(this)" 
-            data-nombre="Montaña Rusa"
-            data-descripcion="Emoción pura en cada curva y caída. ¡Siente la adrenalina!"
-            data-precio="$500 por hora" 
-            data-altura="40m" 
-            data-area="50x30m" 
-            data-potencia="200 kW"
-            data-voltaje="380V 50Hz" 
-            data-capacidad="20 personas">
-                <img src="images/MONTAÑARUSA.png" alt="Imagen de Montaña rusa">
-                <h3>Montaña Rusa</h3>
-                <p>Emoción pura en cada curva y caída. ¡Siente la adrenalina!</p>
-                <p class="precio">$500 por hora</p>
-                <button>Ver más</button>
-            </div>
-            <!-- Añade más juegos aquí -->
-        </section>
-    </main>
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
-            <div class="juego-img">
-                <img id="juego-imagen" alt="Imagen del juego seleccionado">
-                <h2 id="juego-seleccionado"></h2>
-            </div>
-            <div id="juego-detalles"></div>
-            <div class="fecha-apartado-detalles">
-                <label for="fecha-apartado"><strong>Selecciona una fecha para apartar:</strong></label>
-                <input type="date" id="fecha-apartado">
-                <button onclick="apartarJuego()">Apartar Juego</button>
-            </div>
-        </div>
+    <div class="footer">
+        <p>© 2024 Renta de Juegos Mecánicos. Todos los derechos reservados.</p>
     </div>
+    <script>
+        document.getElementById("sendWhatsApp").addEventListener("click", function () {
+            const dateInput = document.getElementById("dateInput").value;
+            if (dateInput) {
+                const message = `Hola, quiero reservar un juego mecánico para la fecha ${dateInput}.`;
+                const phoneNumber = "1234567890"; // Reemplaza con el número de WhatsApp
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappURL, "_blank");
+            } else {
+                alert("Por favor, selecciona una fecha antes de continuar.");
+            }
+        });
+    </script>
 </body>
 </html>
