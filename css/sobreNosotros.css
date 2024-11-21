@@ -11,6 +11,11 @@
     /* Necesario para que los iconos de dictado se posicionen correctamente */
 }
 
+*:focus {
+    outline: 4px solid #f1c40f;
+    outline-offset: 1px;
+}
+
 /* Menú en barra superior */
 .menu-bar {
     display: flex;
