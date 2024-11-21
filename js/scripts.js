@@ -1,6 +1,26 @@
 let mensajeDictado;
 let nombreJuegoGloabl = '';
 let dictadoActivo = false;
+let zoomLevel = 1;
+
+// Función para aumentar el zoom
+function incrementarZoom() {
+    zoomLevel += 0.1; // Incrementa el zoom
+    if (zoomLevel > 2) zoomLevel = 2; // Límite máximo de 200%
+    aplicarZoom();
+}
+
+// Función para reducir el zoom
+function reducirZoom() {
+    zoomLevel -= 0.1; // Reduce el zoom
+    if (zoomLevel < 0.5) zoomLevel = 0.5; // Límite mínimo de 50%
+    aplicarZoom();
+}
+
+// Función para aplicar el nivel de zoom al cuerpo de la página
+function aplicarZoom() {
+    document.body.style.zoom = zoomLevel.toFixed(2); // Aplica el zoom con 2 decimales
+}
 
 function activarDictado() {
     if (dictadoActivo) {

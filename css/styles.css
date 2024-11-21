@@ -311,7 +311,26 @@ button:hover {
     display: inline-block;
 }
 
-.iconos-dictado .icono-bocina:hover {
+.iconos-dictado .icono-zoom {
+    cursor: pointer;
+    font-size: 29px;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.iconos-dictado .zoom-btn{
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.iconos-dictado .zoom-btn:hover {
     background-color: #0056b3;
 }
 
