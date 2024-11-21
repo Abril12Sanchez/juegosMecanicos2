@@ -319,13 +319,13 @@ button:hover {
     display: inline-block;
 }
 
-.iconos-dictado .zoom-btn{
+.iconos-dictado .zoom-btn {
     cursor: pointer;
     font-size: 20px;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
+    background-color: #5178a8;
     color: white;
     transition: background-color 0.3s ease;
 }

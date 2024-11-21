@@ -22,7 +22,15 @@
         </nav>
         <div class="iconos-dictado">
             <!-- Botón para activar/desactivar la funcionalidad -->
-            <div class="icono-bocina" onclick="activarDictado()" title="Activar dictado">🗣️ Activar dictado</div>
+            <button class="icono-bocina" onclick="activarDictado()" title="Activar dictado" tabindex="0"
+                aria-label="Activar dictado">
+                🗣️Activar dictado </button>
+            <div class="icono-zoom" title="Zoom en página">🔍</div>
+            <!-- Botones para aumentar y reducir zoom -->
+            <button class="zoom-btn" onclick="reducirZoom()" title="Reducir zoom">−</button>
+            <span id="zoom-porcentaje">100%</span> <!-- Muestra el porcentaje de zoom -->
+            <button class="zoom-btn" onclick="incrementarZoom()" title="Aumentar zoom">+</button>
+
         </div>
     </header>
     <main>
