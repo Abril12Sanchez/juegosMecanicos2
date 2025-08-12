@@ -58,15 +58,17 @@ document.body.addEventListener("mouseover", (event) => {
 });
 
 function infoJuego(juegoDiv) {
-  const juegoNombre = juegoDiv.getAttribute("data-nombre");
-  const juegoDescripcion = juegoDiv.getAttribute("data-descripcion");
-  const juegoPrecio = juegoDiv.getAttribute("data-precio");
-  const juegoAltura = juegoDiv.getAttribute("data-altura");
-  const juegoArea = juegoDiv.getAttribute("data-area");
-  const juegoPotencia = juegoDiv.getAttribute("data-potencia");
-  const juegoVoltaje = juegoDiv.getAttribute("data-voltaje");
-  const juegoCapacidad = juegoDiv.getAttribute("data-capacidad");
-  const juegoImagenSrc = juegoDiv.querySelector("img").src;
+
+  const card = juegoDiv.closest(".juego");
+  const juegoNombre = card.getAttribute("data-nombre");
+  const juegoDescripcion = card.getAttribute("data-descripcion");
+  const juegoPrecio = card.getAttribute("data-precio");
+  const juegoAltura = card.getAttribute("data-altura");
+  const juegoArea = card.getAttribute("data-area");
+  const juegoPotencia = card.getAttribute("data-potencia");
+  const juegoVoltaje = card.getAttribute("data-voltaje");
+  const juegoCapacidad = card.getAttribute("data-capacidad");
+  const juegoImagenSrc = card.querySelector("img").src;
 
   document.getElementById("juego-seleccionado").innerText = `${juegoNombre}`;
   document.getElementById("juego-imagen").src = juegoImagenSrc;

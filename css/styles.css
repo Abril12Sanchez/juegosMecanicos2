@@ -343,3 +343,21 @@ footer {
     margin-top: 20px;
     /* Espacio superior para separar del contenido */
 }
+
+.rating {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    margin: 5px 0;
+}
+
+.rating .estrella {
+    color: gray;
+    transition: color 0.2s;
+}
+
+.rating .estrella:hover {
+    transform: scale(1.2);
+}

@@ -41,7 +41,7 @@
     <main id="home">
         <section id="juegos" class="juego-container">
             <!-- Juego 1 -->
-            <div class="juego" data-categoria="extremo" onclick="infoJuego(this)" data-nombre="Montaña Rusa"
+            <div class="juego" data-categoria="extremo" data-nombre="Montaña Rusa"
                 data-descripcion="Emoción pura en cada curva y caída. ¡Siente la adrenalina!"
                 data-precio="$500 por hora" data-altura="40m" data-area="50x30m" data-potencia="200 kW"
                 data-voltaje="380V 50Hz" data-capacidad="20 personas">
@@ -49,11 +49,19 @@
                 <h3>Montaña Rusa</h3>
                 <p>Emoción pura en cada curva y caída. ¡Siente la adrenalina!</p>
                 <p class="precio">$500 por hora</p>
-                <button>Ver mas</button>
+                <p class="precio">Puntuacion</p>
+                    <div class="rating" data-rating="0">
+                        <span class="estrella" data-value="1">★</span>
+                        <span class="estrella" data-value="2">★</span>
+                        <span class="estrella" data-value="3">★</span>
+                        <span class="estrella" data-value="4">★</span>
+                        <span class="estrella" data-value="5">★</span>
+                    </div>
+                <button onclick="infoJuego(this)">Ver mas</button>
             </div>
 
             <!-- Juego 2 -->
-            <div class="juego" data-categoria="familiar" onclick="infoJuego(this)" data-nombre="Rueda de la Fortuna"
+            <div class="juego" data-categoria="familiar" data-nombre="Rueda de la Fortuna"
                 data-descripcion="Disfruta de las vistas más altas de la feria." data-precio="$399 por hora"
                 data-altura="65m" data-area="38x32m" data-potencia="100 kW" data-voltaje="380V 50Hz"
                 data-capacidad="216 personas">
@@ -61,11 +69,21 @@
                 <h3>Rueda de la Fortuna</h3>
                 <p>Disfruta de las vistas más altas de la feria.</p>
                 <p class="precio">$399 por hora</p>
-                <button>Ver mas</button>
+
+                <p class="precio">Puntuacion</p>
+                <div class="rating" data-rating="0">
+                        <span class="estrella" data-value="1">★</span>
+                        <span class="estrella" data-value="2">★</span>
+                        <span class="estrella" data-value="3">★</span>
+                        <span class="estrella" data-value="4">★</span>
+                        <span class="estrella" data-value="5">★</span>
+                    </div>
+
+                <button onclick="infoJuego(this)">Ver mas</button>
             </div>
 
             <!-- Juego 3 -->
-            <div class="juego" data-categoria="infantil" onclick="infoJuego(this)" data-nombre="Gusanito"
+            <div class="juego" data-categoria="infantil" data-nombre="Gusanito"
                 data-descripcion="Que los peques disfruten dar vueltas sin miedo a las alturas."
                 data-precio="$270 por hora" data-altura="5m" data-area="10x8m" data-potencia="20 kW"
                 data-voltaje="220V 50Hz" data-capacidad="15 personas">
@@ -73,11 +91,20 @@
                 <h3>Gusanito</h3>
                 <p>Que los peques disfruten dar vueltas sin miedo a las aturas.</p>
                 <p class="precio">$270 por hora</p>
-                <button>Ver mas</button>
+                <p class="precio">Puntuacion</p>
+                <div class="rating" data-rating="0">
+                        <span class="estrella" data-value="1">★</span>
+                        <span class="estrella" data-value="2">★</span>
+                        <span class="estrella" data-value="3">★</span>
+                        <span class="estrella" data-value="4">★</span>
+                        <span class="estrella" data-value="5">★</span>
+                    </div>
+
+                <button onclick="infoJuego(this)">Ver mas</button>
             </div>
 
             <!-- Juego 4 -->
-            <div class="juego" data-categoria="infantil" onclick="infoJuego(this)" data-nombre="Dragoncito Mini"
+            <div class="juego" data-categoria="infantil" data-nombre="Dragoncito Mini"
                 data-descripcion="Que los niños disfruten al estar más alto de su estatura." data-precio="$325 por hora"
                 data-altura="8m" data-area="12x10m" data-potencia="30 kW" data-voltaje="220V 50Hz"
                 data-capacidad="12 personas">
@@ -85,11 +112,20 @@
                 <h3>Dragoncito Mini</h3>
                 <p>Que los niños disfruten al estar mas alto de su estatura.</p>
                 <p class="precio">$325 por hora</p>
-                <button>Ver mas</button>
+                <p class="precio">Puntuacion</p>
+                <div class="rating" data-rating="0">
+                        <span class="estrella" data-value="1">★</span>
+                        <span class="estrella" data-value="2">★</span>
+                        <span class="estrella" data-value="3">★</span>
+                        <span class="estrella" data-value="4">★</span>
+                        <span class="estrella" data-value="5">★</span>
+                    </div>
+
+                <button onclick="infoJuego(this)">Ver mas</button>
             </div>
 
             <!-- Juego 5 -->
-            <div class="juego" data-categoria="familiar" onclick="infoJuego(this)" data-nombre="Dragoncito"
+            <div class="juego" data-categoria="familiar" data-nombre="Dragoncito"
                 data-descripcion="Igual que el mini pero con más altura y capacidad." data-precio="$499 por hora"
                 data-altura="12m" data-area="15x12m" data-potencia="50 kW" data-voltaje="380V 50Hz"
                 data-capacidad="20 personas">
@@ -97,11 +133,20 @@
                 <h3>Dragoncito</h3>
                 <p>Igual que el mini pero mas altura y mas cantidad!!.</p>
                 <p class="precio">$499 por hora</p>
-                <button>Ver mas</button>
+                <p class="precio">Puntuacion</p>
+                <div class="rating" data-rating="0">
+                        <span class="estrella" data-value="1">★</span>
+                        <span class="estrella" data-value="2">★</span>
+                        <span class="estrella" data-value="3">★</span>
+                        <span class="estrella" data-value="4">★</span>
+                        <span class="estrella" data-value="5">★</span>
+                    </div>
+
+                <button onclick="infoJuego(this)">Ver mas</button>
             </div>
 
             <!-- Juego 6 -->
-            <div class="juego" data-categoria="familiar" onclick="infoJuego(this)" data-nombre="Carrusel"
+            <div class="juego" data-categoria="familiar" data-nombre="Carrusel"
                 data-descripcion="Para que las parejas disfruten dar vueltas juntos." data-precio="$460 por hora"
                 data-altura="6m" data-area="14x14m" data-potencia="25 kW" data-voltaje="220V 50Hz"
                 data-capacidad="30 personas">
@@ -109,7 +154,16 @@
                 <h3>Carrusel</h3>
                 <p>Para que las parejas disfruten dar vueltas juntos.</p>
                 <p class="precio">$460 por hora</p>
-                <button>Ver mas</button>
+                <p class="precio">Puntuacion</p>
+                <div class="rating" data-rating="0">
+                        <span class="estrella" data-value="1">★</span>
+                        <span class="estrella" data-value="2">★</span>
+                        <span class="estrella" data-value="3">★</span>
+                        <span class="estrella" data-value="4">★</span>
+                        <span class="estrella" data-value="5">★</span>
+                    </div>
+
+                <button onclick="infoJuego(this)">Ver mas</button>
             </div>
         </section>
 
@@ -132,5 +186,6 @@
     <script src="js/scripts.js"></script>
     <script src="js/filtrado.js"></script>
     <script src="js/zoom.js"></script>
+    <script src="js/puntuacion.js"></script>
 </body>
 </html>
