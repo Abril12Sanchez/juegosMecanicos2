@@ -20,6 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
   nuevo.setAttribute("data-nombre", data.nombre || "");
   nuevo.setAttribute("data-descripcion", data.descripcion || "");
   nuevo.setAttribute("data-precio", data.precio || "");
+  nuevo.setAttribute("data-altura", data.altura || "");
+  nuevo.setAttribute("data-area", data.area || "");
+  nuevo.setAttribute("data-potencia", data.potencia || "");
+  nuevo.setAttribute("data-voltaje", data.voltaje || "");
+  nuevo.setAttribute("data-capacidad", data.capacidad || "");
 
   nuevo.innerHTML = `
     <img src="${data.imagen || ""}" alt="Imagen de ${data.nombre || "juego"}">

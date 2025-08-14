@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/formulario.css">
 </head>
+
 <body>
-        <header class="top-bar">
+    <header class="top-bar">
         <div class="logoname">
             <a href="/index.html" class="logo-link">
                 <img src="images/logopng.png" width="40px" height="40px" alt="Logo de juegos Gomez">
@@ -27,24 +29,30 @@
         <input type="text" id="nombre" placeholder="Nombre del juego" required>
         <textarea id="descripcion" placeholder="Descripción" required></textarea>
         <input type="text" id="precio" placeholder="Precio (ej: $500 por hora)" required>
+        <input type="text" id="altura" placeholder="Altura (ej: 6m)" required>
+        <input type="text" id="area" placeholder="Área (ej: 14x14m)" required>
+        <input type="text" id="potencia" placeholder="Potencia (ej: 25 kW)" required>
+        <input type="text" id="voltaje" placeholder="Voltaje (ej: 220V 50Hz)" required>
+        <input type="text" id="capacidad" placeholder="Capacidad (ej: 30 personas)" required>
         <select id="categoria" required>
             <option value="">Seleccione categoría</option>
             <option value="extremo">Extremo</option>
             <option value="familiar">Familiar</option>
             <option value="infantil">Infantil</option>
         </select>
-        
-        <!-- Nuevo: input para subir imagen -->
-         <input type="file" id="imagen" accept="image/*" required>
-         <img id="preview" style="max-width: 200px; margin-top: 10px; display: none;">
 
-         <button type="submit">Agregar juego</button>
-        </form>
+        <!-- Nuevo: input para subir imagen -->
+        <input type="file" id="imagen" accept="image/*" required>
+        <img id="preview" style="max-width: 200px; margin-top: 10px; display: none;">
+
+        <button type="submit">Agregar juego</button>
+    </form>
 
     <hr>
     <script src="js/scripts.js"></script>
     <script src="js/zoom.js"></script>
     <script src="js/agregar.js"></script>
-    
+
 </body>
+
 </html>

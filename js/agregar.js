@@ -19,18 +19,36 @@ document.getElementById("imagen").addEventListener("change", function(event) {
 document.getElementById("form-nuevo-juego").addEventListener("submit", function(event) {
     event.preventDefault();
 
+    // Capturar todos los campos del formulario
     const nombre = document.getElementById("nombre").value;
     const descripcion = document.getElementById("descripcion").value;
     const precio = document.getElementById("precio").value;
     const categoria = document.getElementById("categoria").value;
+    const altura = document.getElementById("altura").value;
+    const area = document.getElementById("area").value;
+    const potencia = document.getElementById("potencia").value;
+    const voltaje = document.getElementById("voltaje").value;
+    const capacidad = document.getElementById("capacidad").value;
 
     if (!imagenTemp) {
         alert("Por favor seleccione una imagen");
         return;
     }
 
-    // Guardar datos en sessionStorage para mostrar en index.html
-    const nuevoJuego = { nombre, descripcion, precio, categoria, imagen: imagenTemp };
+    // Guardar todos los datos en sessionStorage
+    const nuevoJuego = { 
+        nombre, 
+        descripcion, 
+        precio, 
+        categoria, 
+        imagen: imagenTemp,
+        altura,
+        area,
+        potencia,
+        voltaje,
+        capacidad
+    };
+
     sessionStorage.setItem("nuevoJuego", JSON.stringify(nuevoJuego));
 
     // Redirigir al inicio
