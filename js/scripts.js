@@ -196,3 +196,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+    const nuevoJuegoStr = sessionStorage.getItem("nuevoJuego");
+    if (nuevoJuegoStr) {
+        const nuevoJuego = JSON.parse(nuevoJuegoStr);
+
+        const container = document.querySelector(".contenedor-juegos"); // ajusta al contenedor real
+        const card = document.createElement("div");
+        card.classList.add("juego");
+        card.innerHTML = `
+            <img src="${nuevoJuego.imagen}" alt="${nuevoJuego.nombre}">
+            <h3>${nuevoJuego.nombre}</h3>
+            <p>${nuevoJuego.descripcion}</p>
+            <p><strong>${nuevoJuego.precio}</strong></p>
+            <button onclick="infoJuego(this)">Ver más</button>
+        `;
+        container.appendChild(card);
+
+        // Limpia el sessionStorage para que no se repita al recargar
+        sessionStorage.removeItem("nuevoJuego");
+    }
+});
